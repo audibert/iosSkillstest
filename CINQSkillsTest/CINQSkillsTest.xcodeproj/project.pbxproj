@@ -8,12 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		0E522BF7213B7082009C3912 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E522BF6213B7082009C3912 /* AppDelegate.swift */; };
-		0E522BF9213B7082009C3912 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E522BF8213B7082009C3912 /* ViewController.swift */; };
+		0E522BF9213B7082009C3912 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E522BF8213B7082009C3912 /* LoginViewController.swift */; };
 		0E522BFC213B7082009C3912 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E522BFA213B7082009C3912 /* Main.storyboard */; };
 		0E522BFE213B7083009C3912 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0E522BFD213B7083009C3912 /* Assets.xcassets */; };
 		0E522C01213B7083009C3912 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E522BFF213B7083009C3912 /* LaunchScreen.storyboard */; };
 		0E522C0C213B7083009C3912 /* CINQSkillsTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E522C0B213B7083009C3912 /* CINQSkillsTestTests.swift */; };
 		0E522C17213B7083009C3912 /* CINQSkillsTestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E522C16213B7083009C3912 /* CINQSkillsTestUITests.swift */; };
+		0E522C2A213B773C009C3912 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E522C29213B773C009C3912 /* SignUpViewController.swift */; };
+		0E522C2C213B7AA3009C3912 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E522C2B213B7AA3009C3912 /* Utils.swift */; };
+		0E522C35213B9303009C3912 /* CINQSkillsTest.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0E522C33213B9303009C3912 /* CINQSkillsTest.xcdatamodeld */; };
+		0E522CB1213B950E009C3912 /* PersistenceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E522CB0213B950E009C3912 /* PersistenceService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +40,7 @@
 /* Begin PBXFileReference section */
 		0E522BF3213B7082009C3912 /* CINQSkillsTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CINQSkillsTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0E522BF6213B7082009C3912 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		0E522BF8213B7082009C3912 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		0E522BF8213B7082009C3912 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		0E522BFB213B7082009C3912 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0E522BFD213B7083009C3912 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0E522C00213B7083009C3912 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +51,11 @@
 		0E522C12213B7083009C3912 /* CINQSkillsTestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CINQSkillsTestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0E522C16213B7083009C3912 /* CINQSkillsTestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CINQSkillsTestUITests.swift; sourceTree = "<group>"; };
 		0E522C18213B7083009C3912 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0E522C29213B773C009C3912 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		0E522C2B213B7AA3009C3912 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		0E522C2E213B8E42009C3912 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		0E522C34213B9303009C3912 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		0E522CB0213B950E009C3912 /* PersistenceService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +90,7 @@
 				0E522C0A213B7083009C3912 /* CINQSkillsTestTests */,
 				0E522C15213B7083009C3912 /* CINQSkillsTestUITests */,
 				0E522BF4213B7082009C3912 /* Products */,
+				0E522C2D213B8E42009C3912 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -128,7 +138,8 @@
 		0E522C24213B708E009C3912 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				0E522BF8213B7082009C3912 /* ViewController.swift */,
+				0E522BF8213B7082009C3912 /* LoginViewController.swift */,
+				0E522C29213B773C009C3912 /* SignUpViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -154,6 +165,7 @@
 			children = (
 				0E522BF6213B7082009C3912 /* AppDelegate.swift */,
 				0E522BFD213B7083009C3912 /* Assets.xcassets */,
+				0E522C2B213B7AA3009C3912 /* Utils.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -161,8 +173,18 @@
 		0E522C28213B70AE009C3912 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				0E522C33213B9303009C3912 /* CINQSkillsTest.xcdatamodeld */,
+				0E522CB0213B950E009C3912 /* PersistenceService.swift */,
 			);
 			path = Network;
+			sourceTree = "<group>";
+		};
+		0E522C2D213B8E42009C3912 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0E522C2E213B8E42009C3912 /* libsqlite3.tbd */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -233,6 +255,7 @@
 				TargetAttributes = {
 					0E522BF2213B7082009C3912 = {
 						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 0940;
 					};
 					0E522C06213B7083009C3912 = {
 						CreatedOnToolsVersion = 9.4.1;
@@ -296,8 +319,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0E522BF9213B7082009C3912 /* ViewController.swift in Sources */,
+				0E522C2A213B773C009C3912 /* SignUpViewController.swift in Sources */,
+				0E522CB1213B950E009C3912 /* PersistenceService.swift in Sources */,
+				0E522BF9213B7082009C3912 /* LoginViewController.swift in Sources */,
+				0E522C35213B9303009C3912 /* CINQSkillsTest.xcdatamodeld in Sources */,
 				0E522BF7213B7082009C3912 /* AppDelegate.swift in Sources */,
+				0E522C2C213B7AA3009C3912 /* Utils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -470,6 +497,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = CINQSkillsTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -478,6 +506,9 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = audibert.CINQSkillsTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_OBJC_INTERFACE_HEADER_NAME = "";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -487,6 +518,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = CINQSkillsTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -495,6 +527,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = audibert.CINQSkillsTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_OBJC_INTERFACE_HEADER_NAME = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -618,6 +652,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		0E522C33213B9303009C3912 /* CINQSkillsTest.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				0E522C34213B9303009C3912 /* Model.xcdatamodel */,
+			);
+			currentVersion = 0E522C34213B9303009C3912 /* Model.xcdatamodel */;
+			path = CINQSkillsTest.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 0E522BEB213B7082009C3912 /* Project object */;
 }
