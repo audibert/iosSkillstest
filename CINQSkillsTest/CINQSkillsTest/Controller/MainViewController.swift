@@ -13,8 +13,9 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     @IBOutlet weak var searchBar: UISearchBar!
     
+    // Recebe todos os usuários registrados
     var registeredUsers: [User]?
-    
+    // Recebe todos os usuários com o filtro
     var currentDisplayedUsers = [User]()
     
     @IBOutlet weak var tableView: UITableView!
@@ -23,8 +24,6 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
     var userLoggedIn: User? = nil
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("\(String(describing: userLoggedIn))")
-        print(userLoggedIn!.email!)
         
         self.tableView.dataSource = self
         self.tableView.delegate = self
@@ -33,16 +32,20 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
         self.navigationItem.setHidesBackButton(true, animated:true);
 
         if let user = userLoggedIn {
-        welcomeLbl.text = "Bem vindo, \(user.name!)"
+            welcomeLbl.text = "Bem vindo, \(user.name!)"
         }
         
-        
+        // Faz a requisição dos usuários para o Core Data
         fetchUsers()
         
         
     }
 
+    /**
+     * Função que faz a requisição dos usuários cadastrados no Core Data
+     */
     private func fetchUsers() {
+        
         registeredUsers = UsersFactory.instance.fetchAllusers()
         
         if registeredUsers != nil {
@@ -67,9 +70,8 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "registeredUsersCell", for: indexPath) as? RegisteredUsersTableViewCell
         
-        //if let users = registeredUsers {
         cell!.setupCell(user: currentDisplayedUsers[indexPath.row])
-        //}
+        
         
         return cell!
     }
@@ -78,10 +80,18 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
     //MARK:- Métodos do SearchBar
     
     func setupSearchBar() {
-        self.searchBar.delegate = self
+        searchBar.delegate = self
+        // Faz o background color do searchbar ficar transparente
+        searchBar.barTintColor = UIColor.clear
+        searchBar.backgroundColor = UIColor.clear
+        searchBar.isTranslucent = true
+        searchBar.setBackgroundImage(UIImage(), for: .any, barMetrics: .default)
     }
     
     
+    /**
+     * Função que é executada quando o usuário digita algo na search bar
+     */
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         if let users = registeredUsers {
             
@@ -91,17 +101,24 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
                 return
                 
             }
-            
             currentDisplayedUsers = users.filter({ (user) -> Bool in
-               // guard let text = searchBar.text else { return false }
-                 user.name!.lowercased().contains(searchText.lowercased()) //|| user.email!.contains(searchText)
+                 user.name!.lowercased().contains(searchText.lowercased()) || user.email!.lowercased().contains(searchText.lowercased())
             })
             tableView.reloadData()
             
         }
     }
     
+    //MARK:- Prepare for Segue
     
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.destination is SignUpViewController
+        {
+            let vc = segue.destination as? SignUpViewController
+            vc?.shouldRemoveBackButton = true
+        }
+    }
     
 
 }

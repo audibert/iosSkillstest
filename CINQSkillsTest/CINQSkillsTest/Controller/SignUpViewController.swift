@@ -12,6 +12,7 @@ import CoreData
 class SignUpViewController: UIViewController {
 
     var userForSegue : User? = nil
+    var shouldRemoveBackButton = false
     
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var nameErrorLbl: UILabel!
@@ -30,22 +31,31 @@ class SignUpViewController: UIViewController {
         emailErrorLbl.isHidden = true
         passwordErrorLbl.isHidden = true
         
+        if shouldRemoveBackButton {
+            self.navigationItem.setHidesBackButton(true, animated:true);
+        }
+        
 
     }
     
     @IBAction func signUpTapped(_ sender: Any) {
     
+        resetErrors()
+        
         var numOfErrors = 0
         if nameTextField.text! == "" {
             nameErrorLbl.isHidden = false
+            nameErrorLbl.text = Constants.NAME_EMPTY_ERROR
             numOfErrors += 1
         }
         if emailTextField.text! == "" {
             emailErrorLbl.isHidden = false
+            emailErrorLbl.text = Constants.EMAIL_EMPTY_ERROR
             numOfErrors += 1
         }
         if passwordTextField.text! == "" {
             passwordErrorLbl.isHidden = false
+            passwordErrorLbl.text = Constants.PASSWORD_EMPTY_ERROR
             numOfErrors += 1
         }
         
@@ -61,10 +71,18 @@ class SignUpViewController: UIViewController {
                 emailErrorLbl.isHidden = false
             }
             
+        } else {
+            
         }
         
     }
     
+    func resetErrors() {
+        
+        nameErrorLbl.isHidden = true
+        emailErrorLbl.isHidden = true
+        passwordErrorLbl.isHidden = true
+    }
     
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

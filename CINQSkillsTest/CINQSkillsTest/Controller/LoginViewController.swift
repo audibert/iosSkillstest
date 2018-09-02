@@ -47,7 +47,7 @@ class LoginViewController: UIViewController {
     
         if numErrors > 0 {
             
-            resetFields()
+           // resetFields()
             return
         }
         

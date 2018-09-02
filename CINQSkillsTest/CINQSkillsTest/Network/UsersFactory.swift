@@ -16,6 +16,9 @@ class UsersFactory {
     private init() {
     }
     
+    /**
+     * Função que salva o novo usuário no Core Data
+     */
     public func saveNewUser(name: String, email: String, password: String) -> User{
         let user = User(context: PersistenceService.context)
         user.name = name
@@ -25,6 +28,9 @@ class UsersFactory {
         return user
     }
     
+    /**
+     * Pega todos os usuários do Core Data
+     */
     public func fetchAllusers() -> [User]? {
         
         let fetchRequest: NSFetchRequest<User> = User.fetchRequest()
@@ -35,7 +41,6 @@ class UsersFactory {
             print(error)
             return nil
         }
-        return nil
         
     }
     
