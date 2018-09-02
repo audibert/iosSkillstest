@@ -25,6 +25,20 @@ class UsersFactory {
         return user
     }
     
+    public func fetchAllusers() -> [User]? {
+        
+        let fetchRequest: NSFetchRequest<User> = User.fetchRequest()
+        do {
+            let users = try PersistenceService.context.fetch(fetchRequest)
+            return users
+        } catch{
+            print(error)
+            return nil
+        }
+        return nil
+        
+    }
+    
     public func retrieveUser(email: String) -> User? {
         
         let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "User")

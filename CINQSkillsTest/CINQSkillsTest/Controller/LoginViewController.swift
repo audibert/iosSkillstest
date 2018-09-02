@@ -28,21 +28,29 @@ class LoginViewController: UIViewController {
 
 
     @IBAction func loginTapped(_ sender: Any) {
-        
-        emailErrorLbl.isHidden = true
-        passwordErrorLbl.isHidden = true
 
+
+        var numErrors = 0
+        
         if emailTextField.text! == "" {
             emailErrorLbl.text = Constants.EMAIL_EMPTY_ERROR
             emailErrorLbl.isHidden = false
+            numErrors += 1
         }
         
         if passwordTextField.text! == "" {
             passwordErrorLbl.text = Constants.PASSWORD_EMPTY_ERROR
             passwordErrorLbl.isHidden = false
-            return
+            numErrors += 1
+            
         }
     
+        if numErrors > 0 {
+            
+            resetFields()
+            return
+        }
+        
         if UsersFactory.instance.userExists(email: emailTextField.text!) {
             let user = UsersFactory.instance.retrieveUser(email: emailTextField.text!)
             
@@ -61,11 +69,20 @@ class LoginViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-        if segue.destination is MainViewController
-        {
+        if segue.destination is MainViewController {
             let vc = segue.destination as? MainViewController
             vc?.userLoggedIn = userToSegue
         }
+    }
+    
+    func resetFields() {
+        
+        emailTextField.text = ""
+        emailErrorLbl.isHidden = true
+        passwordTextField.text = ""
+        passwordErrorLbl.isHidden = true
+        
+        
     }
     
 }
