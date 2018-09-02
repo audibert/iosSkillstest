@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0E2C5A55213BA0D0006322C3 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E2C5A54213BA0D0006322C3 /* MainViewController.swift */; };
+		0E2C5A57213BA525006322C3 /* UsersFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E2C5A56213BA525006322C3 /* UsersFactory.swift */; };
+		0E2C5A59213BACB2006322C3 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E2C5A58213BACB2006322C3 /* Constants.swift */; };
 		0E522BF7213B7082009C3912 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E522BF6213B7082009C3912 /* AppDelegate.swift */; };
 		0E522BF9213B7082009C3912 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E522BF8213B7082009C3912 /* LoginViewController.swift */; };
 		0E522BFC213B7082009C3912 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E522BFA213B7082009C3912 /* Main.storyboard */; };
@@ -18,6 +21,8 @@
 		0E522C2C213B7AA3009C3912 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E522C2B213B7AA3009C3912 /* Utils.swift */; };
 		0E522C35213B9303009C3912 /* CINQSkillsTest.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0E522C33213B9303009C3912 /* CINQSkillsTest.xcdatamodeld */; };
 		0E522CB1213B950E009C3912 /* PersistenceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E522CB0213B950E009C3912 /* PersistenceService.swift */; };
+		0E522CB4213B98A5009C3912 /* User+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E522CB2213B98A5009C3912 /* User+CoreDataClass.swift */; };
+		0E522CB5213B98A5009C3912 /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E522CB3213B98A5009C3912 /* User+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +43,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0E2C5A54213BA0D0006322C3 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		0E2C5A56213BA525006322C3 /* UsersFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersFactory.swift; sourceTree = "<group>"; };
+		0E2C5A58213BACB2006322C3 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		0E522BF3213B7082009C3912 /* CINQSkillsTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CINQSkillsTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0E522BF6213B7082009C3912 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0E522BF8213B7082009C3912 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -56,6 +64,8 @@
 		0E522C2E213B8E42009C3912 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		0E522C34213B9303009C3912 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		0E522CB0213B950E009C3912 /* PersistenceService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceService.swift; sourceTree = "<group>"; };
+		0E522CB2213B98A5009C3912 /* User+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataClass.swift"; sourceTree = "<group>"; };
+		0E522CB3213B98A5009C3912 /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,6 +150,7 @@
 			children = (
 				0E522BF8213B7082009C3912 /* LoginViewController.swift */,
 				0E522C29213B773C009C3912 /* SignUpViewController.swift */,
+				0E2C5A54213BA0D0006322C3 /* MainViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -163,9 +174,12 @@
 		0E522C27213B70A7009C3912 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				0E522CB2213B98A5009C3912 /* User+CoreDataClass.swift */,
+				0E522CB3213B98A5009C3912 /* User+CoreDataProperties.swift */,
 				0E522BF6213B7082009C3912 /* AppDelegate.swift */,
 				0E522BFD213B7083009C3912 /* Assets.xcassets */,
 				0E522C2B213B7AA3009C3912 /* Utils.swift */,
+				0E2C5A58213BACB2006322C3 /* Constants.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -175,6 +189,7 @@
 			children = (
 				0E522C33213B9303009C3912 /* CINQSkillsTest.xcdatamodeld */,
 				0E522CB0213B950E009C3912 /* PersistenceService.swift */,
+				0E2C5A56213BA525006322C3 /* UsersFactory.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -320,11 +335,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				0E522C2A213B773C009C3912 /* SignUpViewController.swift in Sources */,
+				0E2C5A59213BACB2006322C3 /* Constants.swift in Sources */,
 				0E522CB1213B950E009C3912 /* PersistenceService.swift in Sources */,
+				0E522CB5213B98A5009C3912 /* User+CoreDataProperties.swift in Sources */,
 				0E522BF9213B7082009C3912 /* LoginViewController.swift in Sources */,
 				0E522C35213B9303009C3912 /* CINQSkillsTest.xcdatamodeld in Sources */,
 				0E522BF7213B7082009C3912 /* AppDelegate.swift in Sources */,
+				0E2C5A55213BA0D0006322C3 /* MainViewController.swift in Sources */,
 				0E522C2C213B7AA3009C3912 /* Utils.swift in Sources */,
+				0E522CB4213B98A5009C3912 /* User+CoreDataClass.swift in Sources */,
+				0E2C5A57213BA525006322C3 /* UsersFactory.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -507,8 +527,9 @@
 				PRODUCT_BUNDLE_IDENTIFIER = audibert.CINQSkillsTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "";
-				SWIFT_OBJC_INTERFACE_HEADER_NAME = "";
+				SWIFT_OBJC_INTERFACE_HEADER_NAME = "$(SWIFT_MODULE_NAME)-Swift.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_PRECOMPILE_BRIDGING_HEADER = NO;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -528,7 +549,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = audibert.CINQSkillsTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "";
-				SWIFT_OBJC_INTERFACE_HEADER_NAME = "";
+				SWIFT_OBJC_INTERFACE_HEADER_NAME = "$(SWIFT_MODULE_NAME)-Swift.h";
+				SWIFT_PRECOMPILE_BRIDGING_HEADER = NO;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

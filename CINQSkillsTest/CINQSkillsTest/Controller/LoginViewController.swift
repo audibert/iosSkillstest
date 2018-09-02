@@ -11,7 +11,7 @@ import SQLite3
 
 class LoginViewController: UIViewController {
 
-    
+    var userToSegue: User? = nil
     
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var emailErrorLbl: UILabel!
@@ -29,34 +29,45 @@ class LoginViewController: UIViewController {
 
     @IBAction func loginTapped(_ sender: Any) {
         
+        emailErrorLbl.isHidden = true
+        passwordErrorLbl.isHidden = true
+
         if emailTextField.text! == "" {
-            emailErrorLbl.text = "E-mail é obrigatório"
+            emailErrorLbl.text = Constants.EMAIL_EMPTY_ERROR
             emailErrorLbl.isHidden = false
         }
         
         if passwordTextField.text! == "" {
-            passwordErrorLbl.text = "Senha é obrigatório"
+            passwordErrorLbl.text = Constants.PASSWORD_EMPTY_ERROR
             passwordErrorLbl.isHidden = false
+            return
         }
+    
+        if UsersFactory.instance.userExists(email: emailTextField.text!) {
+            let user = UsersFactory.instance.retrieveUser(email: emailTextField.text!)
+            
+            if let user = user {
+                
+                if user.password == passwordTextField.text! {
+                    userToSegue = user
+                    self.performSegue(withIdentifier: "loginToMain", sender: self)
+                } else {
+                    passwordErrorLbl.text = Constants.WRONG_PASSWORD
+                    passwordErrorLbl.isHidden = false
+                }
+            }
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-        
+        if segue.destination is MainViewController
+        {
+            let vc = segue.destination as? MainViewController
+            vc?.userLoggedIn = userToSegue
+        }
     }
     
 }
 
 
-
-//extension UIViewController: UITableViewDataSource {
-//    func numberOfSections(in tableView: UITableView) -> Int {
-//        return 1
-//    }
-//    public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        return 1
-//    }
-//
-//    public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//        let cell = UITableViewCell(style: .subtitle, reuseIdentifier: nil)
-//        cell.textLabel?.text = ""
-//        cell.detailTextLabel?.text = ""
-//    }
-//}
