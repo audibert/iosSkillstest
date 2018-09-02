@@ -11,6 +11,10 @@
 		0E2C5A57213BA525006322C3 /* UsersFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E2C5A56213BA525006322C3 /* UsersFactory.swift */; };
 		0E2C5A59213BACB2006322C3 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E2C5A58213BACB2006322C3 /* Constants.swift */; };
 		0E4F9465213C67D70018BCF0 /* RegisteredUsersTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E4F9464213C67D70018BCF0 /* RegisteredUsersTableViewCell.swift */; };
+		0E4F9467213C757A0018BCF0 /* AlbumListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E4F9466213C757A0018BCF0 /* AlbumListViewController.swift */; };
+		0E4F9469213C78090018BCF0 /* AlbumTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E4F9468213C78090018BCF0 /* AlbumTableViewCell.swift */; };
+		0E4F946B213C78D70018BCF0 /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E4F946A213C78D70018BCF0 /* Album.swift */; };
+		0E4F946D213C82C90018BCF0 /* AlbumsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E4F946C213C82C90018BCF0 /* AlbumsService.swift */; };
 		0E522BF7213B7082009C3912 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E522BF6213B7082009C3912 /* AppDelegate.swift */; };
 		0E522BF9213B7082009C3912 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E522BF8213B7082009C3912 /* LoginViewController.swift */; };
 		0E522BFC213B7082009C3912 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E522BFA213B7082009C3912 /* Main.storyboard */; };
@@ -48,6 +52,10 @@
 		0E2C5A56213BA525006322C3 /* UsersFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersFactory.swift; sourceTree = "<group>"; };
 		0E2C5A58213BACB2006322C3 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		0E4F9464213C67D70018BCF0 /* RegisteredUsersTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisteredUsersTableViewCell.swift; sourceTree = "<group>"; };
+		0E4F9466213C757A0018BCF0 /* AlbumListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumListViewController.swift; sourceTree = "<group>"; };
+		0E4F9468213C78090018BCF0 /* AlbumTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumTableViewCell.swift; sourceTree = "<group>"; };
+		0E4F946A213C78D70018BCF0 /* Album.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Album.swift; sourceTree = "<group>"; };
+		0E4F946C213C82C90018BCF0 /* AlbumsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumsService.swift; sourceTree = "<group>"; };
 		0E522BF3213B7082009C3912 /* CINQSkillsTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CINQSkillsTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0E522BF6213B7082009C3912 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0E522BF8213B7082009C3912 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -99,6 +107,7 @@
 			isa = PBXGroup;
 			children = (
 				0E4F9464213C67D70018BCF0 /* RegisteredUsersTableViewCell.swift */,
+				0E4F9468213C78090018BCF0 /* AlbumTableViewCell.swift */,
 			);
 			path = TableViewCells;
 			sourceTree = "<group>";
@@ -161,6 +170,7 @@
 				0E522BF8213B7082009C3912 /* LoginViewController.swift */,
 				0E522C29213B773C009C3912 /* SignUpViewController.swift */,
 				0E2C5A54213BA0D0006322C3 /* MainViewController.swift */,
+				0E4F9466213C757A0018BCF0 /* AlbumListViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -178,6 +188,7 @@
 		0E522C26213B709B009C3912 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				0E4F946A213C78D70018BCF0 /* Album.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -201,6 +212,7 @@
 				0E522C33213B9303009C3912 /* CINQSkillsTest.xcdatamodeld */,
 				0E522CB0213B950E009C3912 /* PersistenceService.swift */,
 				0E2C5A56213BA525006322C3 /* UsersFactory.swift */,
+				0E4F946C213C82C90018BCF0 /* AlbumsService.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -351,12 +363,16 @@
 				0E522CB1213B950E009C3912 /* PersistenceService.swift in Sources */,
 				0E522CB5213B98A5009C3912 /* User+CoreDataProperties.swift in Sources */,
 				0E522BF9213B7082009C3912 /* LoginViewController.swift in Sources */,
+				0E4F9467213C757A0018BCF0 /* AlbumListViewController.swift in Sources */,
 				0E522C35213B9303009C3912 /* CINQSkillsTest.xcdatamodeld in Sources */,
 				0E522BF7213B7082009C3912 /* AppDelegate.swift in Sources */,
 				0E2C5A55213BA0D0006322C3 /* MainViewController.swift in Sources */,
+				0E4F946D213C82C90018BCF0 /* AlbumsService.swift in Sources */,
 				0E522C2C213B7AA3009C3912 /* Utils.swift in Sources */,
+				0E4F9469213C78090018BCF0 /* AlbumTableViewCell.swift in Sources */,
 				0E522CB4213B98A5009C3912 /* User+CoreDataClass.swift in Sources */,
 				0E2C5A57213BA525006322C3 /* UsersFactory.swift in Sources */,
+				0E4F946B213C78D70018BCF0 /* Album.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
